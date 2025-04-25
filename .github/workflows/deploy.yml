@@ -25,6 +25,11 @@ jobs:
         run: npm run build
         env:
           VITE_TON_CLIENT_API_KEY: ${{ secrets.VITE_TON_CLIENT_API_KEY }}
+          VITE_HIPO_CONTRACT_ADDRESS: ${{ vars.VITE_HIPO_CONTRACT_ADDRESS }}
+          VITE_KTON_CONTRACT_ADDRESS: ${{ vars.VITE_KTON_CONTRACT_ADDRESS }}
+          VITE_STAKEE_CONTRACT_ADDRESS: ${{ vars.VITE_STAKEE_CONTRACT_ADDRESS }}
+          VITE_TONSTAKERS_CONTRACT_ADDRESS: ${{ vars.VITE_TONSTAKERS_CONTRACT_ADDRESS }}
+
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
